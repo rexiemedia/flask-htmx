@@ -1,41 +1,167 @@
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+body {
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Dark navbar when scrolling */
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 1); /* Dark background with transparency */
+}
+.hero-section {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -110px;
+  margin-left: -112px;
+  margin-right: -112px; 
+}
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+.hero-section .btn {
+  margin: 5px;
+}
+
+/* Featured Section Styling */
+.featured-section {
+  padding: 40px 20px;
+}
+.featured-item {
+  text-align: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 20px;
+}
+.featured-item:hover {
+  transform: translateY(-5px);
+}
+.featured-icon {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  /* .hero-section {
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    margin-top: -50px;
+    margin-left: -112px;
+    margin-right: -112px;
+  } */
+  .hero-section h1 {
+    font-size: 2rem;
   }
-  header h1 {
-    margin: 0;
+  .hero-section p {
+    font-size: 1rem;
   }
-.hero {
-    background: url('./images/Silverback1.webp') no-repeat center center/cover;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  .featured-item {
+    padding: 15px;
   }
-  .hero h2 {
-    font-size: 2.5rem;
+  footer .list-unstyled {
+    text-align: left; /* Align the list items to the left */
+    padding-left: 80px; /* Remove default padding */
   }
-  .container {
-    padding: 2rem;
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 1.8rem;
   }
-  .features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  .hero-section p {
+    font-size: 0.9rem;
   }
-  .feature {
-    background: #fff;
-    margin: 1rem;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(33.333% - 2rem);
-    text-align: center;
+  .featured-item {
+    padding: 10px;
   }
-  .feature h3 {
-    margin: 0.5rem 0;
+  footer .list-unstyled {
+    text-align: left; /* Align the list items to the left */
+    padding-left: 80px; /* Remove default padding */
   }
+}
+
+footer {
+  background-color: #f8f9fa; /* Light grey background */
+  padding: 30px 0; /* Spacing around the content */
+  padding-bottom: 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1rem;
+  color: #6c757d; /* Muted text color */
+  margin-bottom: 10px;
+}
+
+footer .footer-links {
+  display: flex;
+  justify-content: center; /* Center the link groups */
+  gap: 50px; /* Space between link groups */
+  flex-wrap: wrap; /* Ensure it wraps on smaller screens */
+}
+
+footer .footer-column {
+  text-align: center;
+}
+
+footer .footer-column h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #343a40; /* Darker text for headings */
+  margin-bottom: 10px;
+}
+
+footer .footer-column a {
+  display: block; /* Each link on its own line */
+  color: #007bff; /* Bootstrap primary color */
+  font-size: 0.9rem;
+  text-decoration: none; /* Remove underline */
+  margin-bottom: 5px;
+  transition: color 0.2s ease; /* Smooth hover effect */
+}
+
+footer .footer-column a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+/* General Footer Styling */
+
+footer a {
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Default text color for links */
+  transition: color 0.2s ease; /* Smooth color transition */
+}
+
+footer a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Active Link Styling */
+footer a.active {
+  font-weight: bold; /* Highlight the active link */
+  color: #007bff; /* Use primary color for active link */
+}
+footer .list-unstyled {
+  text-align: left; /* Align the list items to the left */
+  padding-left: 100px; 
+}
+footer .col-lg-3 h5 {
+  text-align: left; /* Ensure the header aligns with the links */
+  padding-left: 100px;
+}

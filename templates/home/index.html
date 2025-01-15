@@ -1,27 +1,51 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<header>
-  <h1>Welcome to Fasthtml</h1>
-</header>
-<section class="hero">
-  <h2>Fast, Secure, and Reliable Web Development</h2>
+ <!-- Hero Section -->
+ <section class="hero-section text-white text-center d-flex align-items-center" style="background: url('{{ url_for('static', filename='images/hero-bg.jpg') }}') no-repeat center center; background-size: cover; height: 100vh;">
+  <div class="container">
+      <h1 class="display-4 fw-bold">Welcome to Silverback SecOps</h1>
+      <p class="lead">Your trusted partner in cybersecurity solutions.</p>
+      <div class="mt-4">
+          <a href="#features" class="btn btn-primary btn-lg me-2">Explore Features</a>
+          <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">Get Started</a>
+      </div>
+  </div>
 </section>
 
-<div class="container">
-  <section class="features">
-    <div class="feature">
-      <h3>Fast Performance</h3>
-      <p>Optimized for speed and efficiency.</p>
-    </div>
-    <div class="feature">
-      <h3>Secure by Design</h3>
-      <p>Built with modern security practices.</p>
-    </div>
-    <div class="feature">
-      <h3>Easy Integration</h3>
-      <p>Seamless setup with various tools and frameworks.</p>
-    </div>
-  </section>
-</div>
+<!-- Features Section -->
+<section id="features" class="py-5">
+  <div class="container text-center">
+      <h2 class="fw-bold mb-4">Our Services</h2>
+      <div class="row">
+          <div class="col-md-4">
+              <div class="card shadow-sm p-3">
+                  <img src="{{ url_for('static', filename='images/feature1.jpg') }}" class="card-img-top" alt="Feature 1">
+                  <div class="card-body">
+                      <h5 class="card-title">Threat Hunting</h5>
+                      <p class="card-text">Advanced techniques to detect and neutralize threats before they impact your organization.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card shadow-sm p-3">
+                  <img src="{{ url_for('static', filename='images/feature2.jpg') }}" class="card-img-top" alt="Feature 2">
+                  <div class="card-body">
+                      <h5 class="card-title">Incident Response</h5>
+                      <p class="card-text">Swift response to mitigate security breaches and minimize downtime.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card shadow-sm p-3">
+                  <img src="{{ url_for('static', filename='images/feature3.jpg') }}" class="card-img-top" alt="Feature 3">
+                  <div class="card-body">
+                      <h5 class="card-title">Vulnerability Management</h5>
+                      <p class="card-text">Comprehensive vulnerability assessments to secure your systems.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
 {% endblock %}

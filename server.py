@@ -10,7 +10,7 @@ def home():
     return render_template(
         'home/index.html',
         request=request,
-        title="Home - Welcome to Silverback Security Solutions"
+        title="Silverback SecOps | Cybersecurity Experts"
     )
 
 
@@ -27,3 +27,8 @@ def blog():
 def contact():
     return render_template('contact/index.html', request=request,
         title="Contact US | Silverback Security Solutions")
+
+@app.route("/services")
+def services():
+    return render_template('services/index.html', request=request,
+        title="Services | Silverback Security Solutions")
