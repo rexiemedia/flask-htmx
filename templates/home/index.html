@@ -2,7 +2,7 @@
 
 {% block content %}
  <!-- Hero Section -->
- <section class="hero-section text-white text-center d-flex align-items-center" style="background: url('{{ url_for('static', filename='images/hero-bg.jpg') }}') no-repeat center center; background-size: cover; height: 100vh;">
+ <section class="hero-section text-white text-center d-flex align-items-center" style="background: url('{{ url_for('static', filename='images/hero-bg.webp') }}') no-repeat center center; background-size: cover; height: 100vh;">
   <div class="container">
       <h1 class="display-4 fw-bold">Welcome to Silverback SecOps</h1>
       <p class="lead">Your trusted partner in cybersecurity solutions.</p>
@@ -20,28 +20,31 @@
       <div class="row">
           <div class="col-md-4">
               <div class="card shadow-sm p-3">
-                  <img src="{{ url_for('static', filename='images/feature1.jpg') }}" class="card-img-top" alt="Feature 1">
+                  <img src="{{ url_for('static', filename='images/hunting.webp') }}" class="card-img-top" alt="Threat Hunting">
                   <div class="card-body">
                       <h5 class="card-title">Threat Hunting</h5>
                       <p class="card-text">Advanced techniques to detect and neutralize threats before they impact your organization.</p>
+                      <a href="{{ url_for('services') }}" class="text-primary">Learn more &rarr;</a>
                   </div>
               </div>
           </div>
           <div class="col-md-4">
               <div class="card shadow-sm p-3">
-                  <img src="{{ url_for('static', filename='images/feature2.jpg') }}" class="card-img-top" alt="Feature 2">
+                  <img src="{{ url_for('static', filename='images/Response.webp') }}" class="card-img-top" alt="Incident Response">
                   <div class="card-body">
                       <h5 class="card-title">Incident Response</h5>
                       <p class="card-text">Swift response to mitigate security breaches and minimize downtime.</p>
+                      <a href="{{ url_for('services') }}" class="text-primary">Learn more &rarr;</a>
                   </div>
               </div>
           </div>
           <div class="col-md-4">
               <div class="card shadow-sm p-3">
-                  <img src="{{ url_for('static', filename='images/feature3.jpg') }}" class="card-img-top" alt="Feature 3">
+                  <img src="{{ url_for('static', filename='images/management.webp') }}" class="card-img-top" alt="Vulnerability Management">
                   <div class="card-body">
                       <h5 class="card-title">Vulnerability Management</h5>
                       <p class="card-text">Comprehensive vulnerability assessments to secure your systems.</p>
+                      <a href="{{ url_for('services') }}" class="text-primary">Learn more &rarr;</a>
                   </div>
               </div>
           </div>
